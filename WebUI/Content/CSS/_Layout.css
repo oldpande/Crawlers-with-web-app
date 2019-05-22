@@ -1,0 +1,70 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    background: royalblue url("../Image/background/15-fon-dlya-sayta.png");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    width: 10rem;
+    height: 50px;
+    color: lightblue;
+    padding-left: 60px;
+    margin: 7px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+
+img {
+    margin-top: 5%;
+    height: 120px;
+    width: 120px;
+}
+
+.menu {
+    padding-left: 10px;
+}
+
+    .menu ul {
+        list-style: none;
+    }
+
+    .menu li {
+        padding: 7px;
+        margin-bottom: 7px;
+        display: inline-block;
+        text-align: center;
+        font-weight: 600;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        background-image: linear-gradient(to right, white, #659cfe);
+        white-space: nowrap;
+    }
+
+        .menu li:hover {
+            background-position: 100% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .menu li:focus {
+            outline: none;
+        }
+
+.help {
+    color: lightblue;
+    border: solid 1px;
+    background-color: rgba(83, 83, 83, 0.74);
+    padding-left: 13px;
+}
+
+.novision {
+    text-decoration: none;
+    color: inherit;
+}

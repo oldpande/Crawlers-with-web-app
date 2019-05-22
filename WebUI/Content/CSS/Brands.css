@@ -1,0 +1,112 @@
+﻿.headline {
+    width: 7rem;
+    color: darkblue;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: white;
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.table_content {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-radius: 20px;
+    color: darkblue;
+    background: url("../Image/background/julian-hochgesang-1144603-unsplash.jpg") no-repeat fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+table#big_table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: Agenda-Light, sans-serif;
+    font-weight: 200;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+}
+
+    table#big_table thead th {
+        font-weight: 300;
+        background: #333;
+    }
+
+    table#big_table thead th, table#big_table tbody td {
+        padding: .6rem;
+        font-size: 1.1rem;
+    }
+
+    table#big_table tbody td {
+        padding: .6rem;
+        font-size: 1.1rem;
+        color: #444;
+        background: rgba(255, 255, 255, 0.90);
+    }
+
+    table#big_table tbody tr:not(:last-child) {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+@media screen and (max-width: 790px) {
+
+    table#big_table thead {
+        display: none;
+    }
+
+    table#big_table tbody td {
+        display: block;
+        padding: .3rem;
+    }
+
+    table#big_table tbody tr td:first-child {
+        background: #666;
+        color: #fff;
+    }
+
+    table#big_table tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 16rem;
+    }
+}
+
+.into_site {
+    margin: 10%;
+    text-align: center;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: darkblue;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, white, #659cfe);
+}
+
+    .into_site:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .into_site:focus {
+        outline: none;
+    }

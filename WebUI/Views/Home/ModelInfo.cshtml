@@ -1,0 +1,44 @@
+﻿@model CarBase.WebUI.Models.CarModelViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/Content/CSS/Brands.css")" rel="stylesheet" type="text/css" />
+<div class="headline">
+    <div class="title_brend">
+        <h3>@Model.CarModel.Name</h3>
+    </div>
+    <h5>Цена: от @Model.CarModel.PriceFrom бел. руб.</h5>
+</div>
+<button class="into_site" onclick='location.href="@Model.CarModel.Link"'> Официальный сайт модели</button>
+<div class="table_content">
+    <div class="headline">
+        <h4>Комплектации и версии</h4>
+    </div>
+    <table id="big_table">
+        <thead>
+            <tr class="header">
+                <th><p>Двигатель</p></th>
+                <th><p>Привод</p></th>
+                <th><p>Тип топлива</p></th>
+                <th><p>Трансмиссия</p></th>
+                <th><p>Выбросы</p></th>
+                <th><p>Средний расход топлива</p></th>
+                <th><p>Цена</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model.CarVersions)
+            {
+                <tr>
+                    <td data-th="Двигатель"><p>@m.Engine</p></td>
+                    <td data-th="Привод"><p>@m.Drive</p></td>
+                    <td data-th="Тип топлива"><p>@m.FuelType</p></td>
+                    <td data-th="Трансмиссия"><p>@m.Transmission</p></td>
+                    <td data-th="Выбросы"><p>@m.EnvironmentalStandard</p></td>
+                    <td data-th="Средний расход топлива"><p>@m.FuelConsumptionAverage</p></td>
+                    <td data-th="Цена"><p>от @m.Price</p></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,34 @@
+﻿@using CarBase.WebUI.Helpers
+@model CarBase.WebUI.Models.BrandInfoModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/Content/CSS/Brands.css")" rel="stylesheet" type="text/css" />
+<link href="~/Scripts/tablescript.js" rel="stylesheet" type="text/css" />
+<div class="headline">
+    <div class="title_brend">
+        <img src="@Url.BrandLogoUrl(Model.Brand)" />
+        <h3>@Model.Brand.Name</h3>
+    </div>
+</div>
+<div class="table_content">
+    <table id="big_table">
+        <thead>
+            <tr class="header">
+                <th><p>Название модели</p></th>
+                <th><p>Цена(бел. руб.)</p></th>
+                <th><p>Страница модели</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model.Models)
+            {
+                <tr>
+                    <td data-th="Название модели"><p>@m.Name.Replace("+", " PLUS")</p></td>
+                    <td data-th="Цена(бел. руб.)"><p>от @m.PriceFrom</p></td>
+                    <td data-th="Страница модели"><p><a href="@Url.ModelUrl(Model.Brand.Name, m.Name)">Подробнее</a></p></td>
+                </tr>
+            }
+        <tbody>
+    </table>
+</div>

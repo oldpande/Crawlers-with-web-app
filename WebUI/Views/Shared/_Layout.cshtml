@@ -1,0 +1,32 @@
+﻿@using CarBase.WebUI.Helpers
+@model CarBase.WebUI.Models.PageModelBase
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Car Base</title>
+    <link href="@Url.Content("~/Content/CSS/_Layout.css")" rel="stylesheet" media="screen,projection" type="text/css" />
+    <link href="~/Scripts/tablescript.js" type="text/javascript" />
+</head>
+<body>
+    <div class="logo">
+        <h1><a class="novision" href="Catalog/">Car Base</a></h1>
+    </div>
+    <nav>
+        <ul class="menu">
+            @foreach (var item in Model.Menu)
+            {
+                <li><a class="novision" href="@item.Url">@item.Name</a></li>
+            }
+        </ul>
+    </nav>
+    @RenderBody()
+    <br />
+    <div class="help">
+        Сайт предоставляет вам огомное количество моделеий машин от оффициальных дильеров.<br />Выберите бренд автомобиля, затем его модель.
+        <br /><a href="@Url.AboutUrl()">Справка</a>
+    </div>
+</body>
+</html>

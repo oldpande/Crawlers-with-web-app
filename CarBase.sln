@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{884F3E87-CE21-4A96-A2DE-4EB381C72925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlerManager", "CrawlerManager\CrawlerManager.csproj", "{EF2C6F2B-ABF9-4104-BB64-10A7A5CAAEA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{70EC8846-6C86-4D78-97C8-29DC30A9C499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawlers", "Crawlers\Crawlers.csproj", "{B84E0DC8-764F-4AB9-9189-27BE81BCC006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Tests", "Data.Tests\Data.Tests.csproj", "{FAC2A7DF-9D3F-438A-9EAF-7B738BC645B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{827B2FD7-A74A-4B06-A386-8869A8499007}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{84A738FB-BC66-4439-9068-7D740C0A394B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI.Tests", "WebUI.Tests\WebUI.Tests.csproj", "{74AC990B-7338-4E76-8D2F-D45D7F68DD97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{884F3E87-CE21-4A96-A2DE-4EB381C72925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884F3E87-CE21-4A96-A2DE-4EB381C72925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884F3E87-CE21-4A96-A2DE-4EB381C72925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884F3E87-CE21-4A96-A2DE-4EB381C72925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF2C6F2B-ABF9-4104-BB64-10A7A5CAAEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF2C6F2B-ABF9-4104-BB64-10A7A5CAAEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF2C6F2B-ABF9-4104-BB64-10A7A5CAAEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF2C6F2B-ABF9-4104-BB64-10A7A5CAAEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70EC8846-6C86-4D78-97C8-29DC30A9C499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70EC8846-6C86-4D78-97C8-29DC30A9C499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70EC8846-6C86-4D78-97C8-29DC30A9C499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70EC8846-6C86-4D78-97C8-29DC30A9C499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84E0DC8-764F-4AB9-9189-27BE81BCC006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84E0DC8-764F-4AB9-9189-27BE81BCC006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84E0DC8-764F-4AB9-9189-27BE81BCC006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84E0DC8-764F-4AB9-9189-27BE81BCC006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC2A7DF-9D3F-438A-9EAF-7B738BC645B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC2A7DF-9D3F-438A-9EAF-7B738BC645B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC2A7DF-9D3F-438A-9EAF-7B738BC645B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC2A7DF-9D3F-438A-9EAF-7B738BC645B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A738FB-BC66-4439-9068-7D740C0A394B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A738FB-BC66-4439-9068-7D740C0A394B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A738FB-BC66-4439-9068-7D740C0A394B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A738FB-BC66-4439-9068-7D740C0A394B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74AC990B-7338-4E76-8D2F-D45D7F68DD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74AC990B-7338-4E76-8D2F-D45D7F68DD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74AC990B-7338-4E76-8D2F-D45D7F68DD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74AC990B-7338-4E76-8D2F-D45D7F68DD97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {611E8EC6-77EC-46F5-9640-4BE4B287ECF5}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/sputseyko
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Business\\Business.csproj
+		SccProjectName1 = Business
+		SccLocalPath1 = Business
+		SccProjectUniqueName2 = CrawlerManager\\CrawlerManager.csproj
+		SccProjectName2 = CrawlerManager
+		SccLocalPath2 = CrawlerManager
+		SccProjectUniqueName3 = Crawlers\\Crawlers.csproj
+		SccProjectName3 = Crawlers
+		SccLocalPath3 = Crawlers
+		SccProjectUniqueName4 = Data.Tests\\Data.Tests.csproj
+		SccProjectName4 = Data.Tests
+		SccLocalPath4 = Data.Tests
+		SccProjectUniqueName5 = Data\\Data.csproj
+		SccProjectName5 = Data
+		SccLocalPath5 = Data
+		SccProjectUniqueName6 = WebUI\\WebUI.csproj
+		SccProjectName6 = WebUI
+		SccLocalPath6 = WebUI
+		SccProjectUniqueName7 = WebUI.Tests\\WebUI.Tests.csproj
+		SccProjectName7 = WebUI.Tests
+		SccLocalPath7 = WebUI.Tests
+	EndGlobalSection
+EndGlobal

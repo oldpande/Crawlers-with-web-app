@@ -1,0 +1,87 @@
+﻿
+.catalog_brends {
+    padding: 10px;
+    margin: 7px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.block_brend {
+    color: blue;
+    border: solid 1px;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 7px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    background-color: white;
+}
+
+.headline {
+    width: 13rem;
+    height: auto;
+    color: lightblue;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgba(83, 83, 83, 0.74);
+    padding-left: 40px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.title_back {
+    background: url("../Image/background/markus-spiske-1353144-unsplash.jpg") no-repeat fixed;
+    background-size: cover;
+    border-radius: 20px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search_panel {
+    background: url("../Image/background/asphalt-fog-foggy-229014.jpg") no-repeat fixed;
+    background-size: cover;
+    border-radius: 20px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+form { 
+    margin: 1rem;
+}
+
+#the_searchSe {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 2rem;
+    width: 72%;
+    max-width: 30rem;
+    line-height: 25px;
+    font-size: 16px;
+    background-color: white;
+}
+
+#the_searchBt {
+    border: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 2.1rem;
+    width: auto;
+    font-size: 16px;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, white, #659cfe);
+    transition: all .4s ease-in-out;
+}
+
+    #the_searchBt:hover {
+        background-position: 100% 0;
+        transition: all .4s ease-in-out;
+    }

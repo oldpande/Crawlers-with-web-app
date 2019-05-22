@@ -1,0 +1,22 @@
+﻿@using CarBase.WebUI.Helpers
+@model CarBase.WebUI.Models.CatalogModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/Content/CSS/Catalog.css")" rel="stylesheet" type="text/css" />
+<div class="title_back">
+    <div class="headline"><h3>Каталог автомобильных марок</h3></div>
+    <div class="catalog_brends">
+        @{
+            foreach (var brand in Model.Brands)
+            {
+                <a href="@Url.BrandUrl(brand.Name)">
+                    <div class="block_brend">
+                        <img src="@Url.BrandLogoUrl(brand)" />
+                        <br /><h3>@brand.Name</h3>
+                    </div>
+                </a>
+            }
+        }
+    </div>
+</div>
