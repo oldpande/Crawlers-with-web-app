@@ -20,17 +20,29 @@ namespace CarBase.CrawlerManager
                 var daoCarModel = new CarModelDao();
 
                 // delete all models
+                logManager.Info("Clearing database...");
                 daoCarModel.DeleteAll();
 
                 // load active crawlers
+                logManager.Info("Search active bots...");
                 var brands = daoCarModel.GetAllBrands().Where(i => i.IsActive);
 
                 foreach (var brand in brands)
                 {
-                   Type crawlerType = Type.GetType(brand.CrawlerType);
-                   ICrawler crawler = (ICrawler)Activator.CreateInstance(crawlerType, logManager);
-                   var crawlerExecutor = new CrawlerExecutor(logManager, daoCarModel);
-                   crawlerExecutor.Execute(crawler);
+                    try
+                    {
+                        logManager.Info(brand.Name + " bot is starting");
+                        Type crawlerType = Type.GetType(brand.CrawlerType);
+                        ICrawler crawler = (ICrawler)Activator.CreateInstance(crawlerType, logManager);
+                        var crawlerExecutor = new CrawlerExecutor(logManager, daoCarModel);
+                        crawlerExecutor.Execute(crawler);
+                    }
+                    catch (Exception ex)
+                    {
+                        logManager.Fatal(ex, "\nKapec !\nException: " + ex.Message +
+                                    "\nMethod: " + ex.TargetSite +
+                                    "\nStack trace: " + ex.StackTrace);
+                    }
                 }
             }
             catch (Exception ex)
@@ -39,7 +51,7 @@ namespace CarBase.CrawlerManager
                                     "\nMethod: " + ex.TargetSite +
                                     "\nStack trace: " + ex.StackTrace);
             }
-            Console.WriteLine("All done!");
+            Console.WriteLine("All done! You can clouse this window.");
             Console.ReadKey();
         }
     }

@@ -87,7 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BMVCrawler.cs" />
+    <Compile Include="BMWCrawler.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="CarModelDao.cs" />
     <Compile Include="CarVersion.cs" />

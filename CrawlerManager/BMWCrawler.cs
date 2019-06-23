@@ -10,9 +10,9 @@ using System.Text.RegularExpressions;
 
 namespace CarBase.CrawlerManager
 {
-    class BMVCrawler : HtmlAgilityCrawlerBase
+    class BMWCrawler : HtmlAgilityCrawlerBase
     {
-        public BMVCrawler(Logger logManager) : base(logManager)
+        public BMWCrawler(Logger logManager) : base(logManager)
         {
         }
 
@@ -28,8 +28,12 @@ namespace CarBase.CrawlerManager
                 {
                     var carModel = new Model();
                     carModel.Name = ExtractText(nodeModel, "CarModel.Name", ".//h4", true);
-                    if (carModel.Name == "BMW 3 серии Седан" || carModel.Name== "BMW M760Li xDrive Седан")
+
+                    if (carModel.Name == "BMW 3 серии Седан" || carModel.Name == "BMW M760Li xDrive Седан")
+                    {
                         continue;
+                    }
+
                     //no one can't be double
                     var names = cars.Where(c => c.Name == carModel.Name);
                     if (names.Count() != 0)
@@ -51,15 +55,14 @@ namespace CarBase.CrawlerManager
             string partOfLink = "";
             switch (name)
             {
-                case "BMW 3 серии Седан": partOfLink = "techincal-data.html#tab-0"; break;
                 case "BMW M760Li xDrive": partOfLink = "techincal-data.html#tab-0"; break;
-                case "BMW 7 серии Седан": partOfLink = "bmw-7-series-inform.html"; break;
+                case "BMW 7 серии Седан": partOfLink = "bmw-7-series-inform.html#tab-0"; break;
                 case "BMW 8 серии Купе": partOfLink = "the-8-technical-data.html#tab-0"; break;
                 case "BMW X7": partOfLink = "bmw-x7-inform.html"; break;
                 case "BMW Z4 Родстер": partOfLink = "bmw-z4-roadster-inform.html"; break;
                 default: partOfLink = "technical-data.html#tab-0"; break;
             }
-                
+
             string[] words = link.Split('/');
             words[words.Length - 1] = partOfLink;
             link = "";
@@ -99,7 +102,9 @@ namespace CarBase.CrawlerManager
             if (doubleNumber == null || doubleNumber == "n/a" || doubleNumber == "н/п*" || doubleNumber == "н/п" || doubleNumber == "" || doubleNumber == "-")
                 return null;
             doubleNumber = doubleNumber.Replace('.', ',');
-            return double.Parse(Regex.Matches(doubleNumber, @"\d+\,\d+")[0].Value);
+            Console.Write(doubleNumber + " ");
+            string drm = Regex.Matches(doubleNumber, @"\d+\,\d+")[0].Value;
+            return double.Parse(drm);
         }
     }
 }
